@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ilos.wiser.dottracker.OpenCVPath">
+
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="43.2585205516271"
+        mapbox:mapbox_cameraTargetLng="-79.9210585307877"
+        mapbox:mapbox_cameraZoom="18"
+        mapbox:mapbox_styleUrl="mapbox://styles/wiser/cj585uhjo4ouu2rrowwv31lib"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="208dp" >
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <LinearLayout
+        android:id="@+id/floor_level_buttons2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/level_button_up2"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="increaseMapBoxLayer"
+            android:text="UP"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/level_button_down2"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="decreaseMapBoxLayer"
+            android:text="DOWN"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nameLinLay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:visibility="visible"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintHorizontal_bias="0.502"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/nameText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:hint="User's Name"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:visibility="visible"
+            mapbox:layout_constraintEnd_toEndOf="parent"
+            mapbox:layout_constraintStart_toStartOf="parent"
+            mapbox:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/buildingLinLays2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:visibility="visible"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/buildingText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:maxLength="5"
+            android:hint="Building Name"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:visibility="visible"
+            mapbox:layout_constraintEnd_toEndOf="parent"
+            mapbox:layout_constraintStart_toStartOf="parent"
+            mapbox:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="goToOpenCV"
+        android:layout_marginStart="8dp"
+        android:text="Collect OpenCV Data"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="50dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="108dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Clear"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        android:onClick="clearMarkers"
+        android:textColor="#FFFFFF"/>
+
+
+</android.support.constraint.ConstraintLayout>

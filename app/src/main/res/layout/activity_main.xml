@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ilos.wiser.dottracker.com.ilos.wiser.ILOSDataCollection.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/seal" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+    <Button
+        android:id="@+id/openCVCamBtn"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_margin="0dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="goToOpenCVCam"
+        android:text="Go To OpenCV Camera" />
+
+    <Button
+        android:id="@+id/calibrateBtn"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="goToCalibration"
+        android:layout_margin="0dp"
+        android:text="Calibrate Step Length"
+        android:visibility="visible" />
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="goToInfo"
+        android:src="@drawable/info" />
+
+</RelativeLayout>

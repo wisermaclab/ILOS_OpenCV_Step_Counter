@@ -1,0 +1,4 @@
+include ':app'
+include ':openCVLibrary341'
+include ':openCVLibrary310'
+rootProject.name = 'ILOS Data Collection'
